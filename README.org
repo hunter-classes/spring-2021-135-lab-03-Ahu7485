@@ -1,10 +1,10 @@
 * Spring 2021 - Lab 03
 
-* Last name:
+* Last name: Hu
 
-* First name:
+* First name: Alan
 
-* GitHub username:
+* GitHub username: Ahu7485
 
 * Notes:
 
