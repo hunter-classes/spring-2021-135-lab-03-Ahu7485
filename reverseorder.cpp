@@ -9,20 +9,20 @@ void reverse_order(std::string date1, std::string date2){
     std::string date;
     double useless;
     double w_elevation;
-    char check = 'F';
+    bool check = false;
     std::vector <double> elevations;
     std::vector <std::string> dates;
     //loop
     while(data >> date >> useless >> useless >> useless >> w_elevation){
         data.ignore(INT_MAX, '\n');
         if (date1 == date){
-            check = 'T';
+            check = true;
         }else if (date2 == date){
             elevations.push_back(w_elevation);
             dates.push_back(date);
-            check = 'F';
+            check = false;
         }
-        if (check == 'T'){
+        if (check){
             elevations.push_back(w_elevation);
             dates.push_back(date);
         }
@@ -30,5 +30,6 @@ void reverse_order(std::string date1, std::string date2){
     for (int i = dates.size()-1; i >= 0 ; i--){
     std::cout << dates.at(i) << ": " << elevations.at(i) << " ft\n";
     }
+    data.close();
 
 }
